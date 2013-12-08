@@ -1,4 +1,3 @@
-mruby-clearsilver
-=================
+# mruby-clearsilver
+ClearSilver binding by mruby.
 
-ClearSilver binding by mruby
