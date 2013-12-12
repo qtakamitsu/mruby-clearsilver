@@ -178,8 +178,9 @@ static mrb_value mrb_cs_parse_string(mrb_state *mrb, mrb_value self)
     }
 
     CSPARSE *cs = mrb_get_datatype(mrb, self, &mrb_cs_type);
+    char *text = strdup(RSTRING_PTR(argv1));
 
-    cs_parse_string(cs, RSTRING_PTR(argv1), RSTRING_LEN(argv1));
+    cs_parse_string(cs, text, RSTRING_LEN(argv1));
 
     return mrb_fixnum_value(0);
 }
